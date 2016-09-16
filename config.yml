@@ -1,18 +1,18 @@
 endpoint:
-  url: http://localhost:8080/swagger
-  method: GET
-  timeout: 0.01
+  url: "#{ENV['URL']}"
+  method: "#{ENV['METHOD']}"
+  timeout: "#{ENV['TIMEOUT']}"
   expectation:
-    - type: HTTP_STATUS
-      status: 200
-    - type: LATENCY
-      threshold: 1
-    - type: REGEX
-      regex: '.*(<body).*'
+    - type: "#{ENV['TYPE1']}"
+      status: "#{ENV['STATUS1']}"
+    - type: "#{ENV['TYPE2']}"
+      threshold: "#{ENV['THRESHOLD']}"
+    - type: "#{ENV['TYPE3']}"
+      regex: "#{ENV['REGEX']}"
 cachet:
-  api_url: https://demo.cachethq.io/api/v1
-  token: my_token
-  component_id: 1
-  #metric_id: 1
-  create_incident: true
-frequency: 30
+  api_url: "#{ENV['API_URL']}"
+  token: "#{ENV['TOKEN']}"
+  component_id: "#{ENV['COMPONET_ID']}"
+  #metric_id: "#{ENV['METRIC_ID']}"
+  create_incident: "#{ENV['CREATE_INCIDENT']}"
+frequency: "#{ENV['FREQUENCY']}"
