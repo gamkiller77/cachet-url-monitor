@@ -1,18 +1,18 @@
 endpoint:
-  url: https://docker-alln-01.cisco.com/status
+  url: https://containers.cisco.com/status
   method: GET
-  timeout: 0.010
+  timeout: 0.10
   expectation:
     - type: HTTP_STATUS
       status: 200
     - type: LATENCY
       threshold: 1
     - type: REGEX
-      regex: .*<body>.*
+      regex: ^
 cachet:
   api_url: http://cachet/api/v1/
-  token: k2JRlAsuvCce0a9JjxDk
-  component_id: 00
+  token: eka92nYbLazeSdWyvUig
+  component_id: 01
   #metric_id: 00
   create_incident: true
 frequency: 30
