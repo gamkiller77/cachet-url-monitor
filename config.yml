@@ -1,5 +1,5 @@
 endpoint:
-  url: https://containers.cisco.com/status
+  url: ${URL_2_TEST}
   method: GET
   timeout: 0.10
   expectation:
@@ -12,7 +12,7 @@ endpoint:
 cachet:
   api_url: http://cachet/api/v1/
   token: eka92nYbLazeSdWyvUig
-  component_id: 01
+  component_id: ${COMPANENT_ID}
   #metric_id: 00
   create_incident: true
 frequency: 30
